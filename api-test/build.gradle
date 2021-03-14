@@ -1,22 +1,18 @@
 plugins {
     id 'java'
 }
-
-group 'org.example'
-version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
 }
-ext{
 
-}
 dependencies {
-// https://mvnrepository.com/artifact/io.rest-assured/rest-assured
+    testImplementation group: 'org.testng', name: 'testng', version: '7.3.0'
     testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.3.3'
-
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.1'
 }
 
 test {
-    useJUnitPlatform()
+    useTestNG()
 }
