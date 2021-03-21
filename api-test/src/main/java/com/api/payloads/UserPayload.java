@@ -1,4 +1,4 @@
-package com.socks.api.payloads;
+package com.api.payloads;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;

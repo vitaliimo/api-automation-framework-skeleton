@@ -1,4 +1,4 @@
-package com.socks.api.conditions;
+package com.api.conditions;
 
 import io.restassured.response.Response;
 

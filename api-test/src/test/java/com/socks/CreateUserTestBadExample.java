@@ -4,7 +4,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.socks.api.payloads.UserPayload;
+import com.api.payloads.UserPayload;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

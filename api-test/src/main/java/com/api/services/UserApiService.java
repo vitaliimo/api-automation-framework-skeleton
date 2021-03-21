@@ -1,7 +1,7 @@
-package com.socks.api.services;
+package com.api.services;
 
-import com.socks.api.assertions.AssertableResponse;
-import com.socks.api.payloads.UserPayload;
+import com.api.assertions.AssertableResponse;
+import com.api.payloads.UserPayload;
 
 public class UserApiService extends ApiService {
 
