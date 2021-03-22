@@ -1,4 +1,4 @@
-package com.socks;
+package com;
 
 import com.github.javafaker.Faker;
 import com.api.payloads.UserPayload;

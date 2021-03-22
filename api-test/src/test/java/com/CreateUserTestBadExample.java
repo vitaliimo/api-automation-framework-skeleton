@@ -1,4 +1,4 @@
-package com.socks;
+package com;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.annotations.BeforeClass;
