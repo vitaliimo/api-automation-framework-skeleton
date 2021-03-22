@@ -4,7 +4,9 @@ import com.api.conditions.Condition;
 import io.restassured.http.Headers;
 import io.restassured.response.Response;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 @RequiredArgsConstructor
 public class AssertableResponse {
 
@@ -14,6 +16,7 @@ public class AssertableResponse {
     // And every condition is implemented in separate class
     // In order to make possible chain calls I return AssertableResponse
     public AssertableResponse shouldHave(Condition condition) {
+        log.info("Checking condition {}", condition);
         condition.check(response);
         return this;
     }

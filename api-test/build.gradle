@@ -12,8 +12,18 @@ dependencies {
     implementation group: 'io.rest-assured', name: 'rest-assured', version: '4.3.3'
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.1'
     implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+
+    testImplementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+    implementation group: 'ch.qos.logback', name: 'logback-core', version: '1.2.3'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
 }
 
 test {
     useTestNG()
+    testLogging {
+        showStandardStreams = true
+        exceptionFormat = "full"
+        events "PASSED", "FAILED", "SKIPPED"
+    }
+    test.outputs.upToDateWhen { false }
 }

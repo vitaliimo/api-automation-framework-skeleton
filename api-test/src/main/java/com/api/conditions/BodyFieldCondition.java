@@ -1,11 +1,12 @@
 package com.api.conditions;
 
+import lombok.ToString;
 import org.hamcrest.Matcher;
 
 import io.restassured.response.Response;
 import lombok.RequiredArgsConstructor;
 
-
+@ToString
 @RequiredArgsConstructor
 public class BodyFieldCondition implements Condition {
 
