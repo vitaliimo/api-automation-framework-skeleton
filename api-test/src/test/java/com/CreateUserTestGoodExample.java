@@ -1,10 +1,12 @@
 package com;
 
+import com.api.ProjectConfiguration;
 import com.github.javafaker.Faker;
 import com.api.payloads.UserPayload;
 import com.api.responses.CreateUserResponse;
 import com.api.services.UserApiService;
 import io.restassured.RestAssured;
+import org.aeonbits.owner.ConfigFactory;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -18,13 +20,15 @@ import static org.hamcrest.Matchers.not;
 
 public class CreateUserTestGoodExample {
 
+	private final UserApiService userApiService = new UserApiService();
+	private Faker faker;
+
 	@BeforeClass
 	public void setUp() {
-		RestAssured.baseURI = "https://reqres.in/api/users";
+		ProjectConfiguration projectConfiguration = ConfigFactory.create(ProjectConfiguration.class);
+		RestAssured.baseURI = projectConfiguration.baseUrl();
+		faker = new Faker(new Locale(projectConfiguration.locale()));
 	}
-
-	private final UserApiService userApiService = new UserApiService();
-	private final Faker faker = new Faker(new Locale("ru"));
 
 	//Any user even without technical background can understand what is going on in this test
 	//Code is reusable now using userApiService
