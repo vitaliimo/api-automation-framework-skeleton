@@ -1,4 +1,4 @@
-# API test automation framework skeleton
+# Skeleton of automation framework for testing API
 
 Stack:
 - java 8
