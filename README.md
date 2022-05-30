@@ -1,5 +1,4 @@
-# api-test-demo
-This is my pet project for creating API test automation framework
+# API test automation framework skeleton
 
 Stack:
 - java 8
