@@ -1,7 +1,7 @@
 # api-test-demo
 This is my pet project for creating API test automation framework
 
-Technologies stack:
+Stack:
 - java 8
 - testNg
 - RestAssured
